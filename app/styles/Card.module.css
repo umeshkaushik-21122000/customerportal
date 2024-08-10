@@ -11,21 +11,33 @@
     margin: 10px;
   }
   
+  .card-selected{
+    background: #eee;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    padding: 20px;
+    text-align: start;
+    height: 100%;
+    margin: 10px;
+  }
   .imageContainer {
     margin-bottom: 15px;
   }
   
   .image {
     border-radius: 50%;
+    border: 2px solid black;
   }
   
   .details {
     font-size: 0.9rem;
-    color: #333;
+    color: #aaa;
   }
   
   .h3 {
     margin: 0;
     font-size: 1.2rem;
+    color: black;
   }
   

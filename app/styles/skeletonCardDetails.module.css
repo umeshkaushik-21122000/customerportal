@@ -1,0 +1,76 @@
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+  gap: 50px;
+  }
+  
+  .skeleton-item {
+    background: #ccc;
+    height: 150px ;
+    width: 150px ;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .customer-details-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .customer-name{
+    background: #ccc;
+    height: 25px;
+    border-radius: 4px;
+    min-width: 200px;
+    width: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .customer-email{
+    background: #ccc;
+    height: 25px;
+    border-radius: 4px;
+    min-width: 400px;
+    width: 50%;
+    margin-top: 15px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .customer-phone{
+    background: #ccc;
+    height: 25px;
+    border-radius: 4px;
+    min-width: 200px;
+    width: 50%;
+    margin-top: 15px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .customer-address{
+    background: #ccc;
+    height: 25px;
+    border-radius: 4px;
+    min-width: 600px;
+    width: 100%;
+    margin-top: 15px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .customer-image{
+    background: #ccc;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+ 
+  
+  @keyframes pulse {
+    0% {
+      background-color: #ccc;
+    }
+    50% {
+      background-color: #e0e0e0;
+    }
+    100% {
+      background-color: #ccc;
+    }
+  }
+  

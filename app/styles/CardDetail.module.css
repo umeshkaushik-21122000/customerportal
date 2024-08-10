@@ -44,8 +44,8 @@
   
   .photo-card {
     background: #fff;
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 150px !important;
+    max-width: 150px !important;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;

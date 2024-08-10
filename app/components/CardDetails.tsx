@@ -3,8 +3,9 @@ import { usePhotos } from "../hooks/usePhotos";
 import Skeleton from "./SkeletonCardDetails";
 import Image from "next/image";
 import styles from "../styles/CardDetail.module.css";
+import { memo } from "react";
 
-const CardDetails = ({ user }: any) => {
+const CardDetails = memo(({ user }: any) => {
   const { photos, loading, error } = usePhotos(user);
 
   if (loading) {
@@ -28,10 +29,10 @@ const CardDetails = ({ user }: any) => {
       {user != null && user != undefined && (
         <div className={styles['customer-details']}>
           <div>
-          <h3>{fullName}</h3>
-          <p>Email: {user.email}</p>
-          <p>Phone: {user.phone}</p>
-          <p>Address: {address}</p>
+            <h3>{fullName}</h3>
+            <p>Email: {user.email}</p>
+            <p>Phone: {user.phone}</p>
+            <p>Address: {address}</p>
           </div>
           <div>
             <Image src={user.picture.large} alt="img" height={100} width={100} className={styles["full-circle"]} />
@@ -45,14 +46,14 @@ const CardDetails = ({ user }: any) => {
               className={styles["object-cover"]}
               src={photo.download_url}
               alt={photo.author}
-              height={100}
-              width={100}
+              height={150}
+              width={150}
             />
           </div>
         ))}
       </div>
     </div>
   );
-};
+});
 
 export default CardDetails;

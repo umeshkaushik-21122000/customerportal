@@ -5,7 +5,7 @@
 .cardList {
   display: flex;
   flex-direction: column;
-  max-height: 900px;
+  max-height: 800px;
   overflow: scroll;
   gap: 20px;
 }
@@ -16,5 +16,5 @@
 }
 
 #scrollAnchor {
-  height: 100px;
+  height: 20px;
 }

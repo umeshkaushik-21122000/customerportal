@@ -7,7 +7,7 @@ const fetchPhotos = async (page:number) => {
 };
 
 export const usePhotos = (user:any) => {
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -23,17 +23,16 @@ export const usePhotos = (user:any) => {
         setError(err);
       }
       finally{
-         setLoading(false);
+           setLoading(false);
       }
     };
 
-    fetchAndUpdatePhotos(); // Fetch photos initially
+     fetchAndUpdatePhotos();
 
     const intervalId = setInterval(() => {
       fetchAndUpdatePhotos();
-    }, 10000); // 10 seconds
+    }, 10000);
 
-    // Clean up interval on component unmount
     return () => clearInterval(intervalId);
   }, [user]);
 

@@ -8,8 +8,6 @@ const Home = () => {
 
   const [selectedUser, setSelectedUser] = useState(null);
 
-  
-
   return (
     <main className={styles['main-container']}>
       <div className={styles['card-list']}>
