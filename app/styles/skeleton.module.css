@@ -1,0 +1,26 @@
+.skeleton-grid {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  }
+  
+  .skeleton-item {
+    background: #ccc;
+    height: 200px;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% {
+      background-color: #ccc;
+    }
+    50% {
+      background-color: #e0e0e0;
+    }
+    100% {
+      background-color: #ccc;
+    }
+  }
+  

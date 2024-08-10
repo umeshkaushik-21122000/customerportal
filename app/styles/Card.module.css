@@ -1,0 +1,31 @@
+/* Card.module.css */
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 20px;
+    text-align: start;
+    height: 100%;
+    margin: 10px;
+  }
+  
+  .imageContainer {
+    margin-bottom: 15px;
+  }
+  
+  .image {
+    border-radius: 50%;
+  }
+  
+  .details {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
