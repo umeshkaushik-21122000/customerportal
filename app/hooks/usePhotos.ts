@@ -6,17 +6,18 @@ const fetchPhotos = async (page:number) => {
   return response.json();
 };
 
-export const usePhotos = () => {
+export const usePhotos = (user:any) => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
+
 
   useEffect(() => {
     const fetchAndUpdatePhotos = async () => {
       setLoading(true);
       try {
-        const data = await fetchPhotos(page);
+        const RandomNumber=Math.floor(Math.random()*100);
+        const data = await fetchPhotos(RandomNumber);
         setPhotos(data); 
       } catch (err:any) {
         setError(err);
@@ -29,12 +30,12 @@ export const usePhotos = () => {
     fetchAndUpdatePhotos(); // Fetch photos initially
 
     const intervalId = setInterval(() => {
-      setPage(prevPage => prevPage + 1); // Update page number
+      fetchAndUpdatePhotos();
     }, 10000); // 10 seconds
 
     // Clean up interval on component unmount
     return () => clearInterval(intervalId);
-  }, [page]);
+  }, [user]);
 
   return { photos, loading, error };
 };

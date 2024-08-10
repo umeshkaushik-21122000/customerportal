@@ -16,7 +16,7 @@ const CardList = ({selectedUser,setSelectedUser}:any) => {
   if (error) return <div>Error loading users</div>;
 
   return (
-    <div className={styles.cardList}>
+    <div id="limited-scroll" className={styles.cardList}>
       {users.map((user:any) => (
         <Card isSelected={selectedUser!=null?selectedUser.cell===user.id:false} onClick={()=>handleSelectUser(user)} key={user.cell} user={user} />
       ))}

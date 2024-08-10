@@ -18,9 +18,14 @@
     padding: 20px;
   }
   
-  .customer-details {
-    margin-bottom: 20px;
-    text-align: center;
+  .customer-details{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .full-circle{
+    border-radius: 50%;
+    border: 3px solid black;
   }
   
   .customer-name {
