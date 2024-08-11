@@ -1,36 +1,35 @@
-.skeleton-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
-  padding-top: 0px;
-  gap: 50px;
-  width: 100%;
-  }
-  
-  .skeleton-item {
-    background: #ccc;
-    height: 150px ;
-    width: 150px ;
-    border-radius: 8px;
-    animation: pulse 1.5s infinite ease-in-out;
-  }
-
-.customer-details-section{
+.customerDetailsSection {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
-  @keyframes pulse {
-    0% {
-      background-color: #ccc;
-    }
-    50% {
-      background-color: #e0e0e0;
-    }
-    100% {
-      background-color: #ccc;
-    }
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 20px;
+  padding-top: 0;
+  width: 100%;
+}
+
+.skeletonItem {
+  background: #ccc;
+  height: 150px;
+  width: 150px;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ccc;
   }
-  
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}

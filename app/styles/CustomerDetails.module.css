@@ -1,0 +1,13 @@
+.customerDetails {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .fullCircle {
+    border-radius: 50%;
+    border: 3px solid black;
+  }
+  
+  

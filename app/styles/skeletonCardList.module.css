@@ -1,8 +1,9 @@
-.cardList{
+.cardList {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
 }
+
 .card {
   background: #fff;
   border-radius: 10px;
@@ -12,40 +13,41 @@
   padding: 10px;
   min-height: 150px;
   min-width: 380px;
-  gap:20px;
+  gap: 20px;
   margin: 10px;
   animation: pulse 1.5s infinite ease-in-out;
 }
 
-.detail{
-  border: 1px solide black;
+.details {
   display: flex;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail, 
+.detailHeading {
+  background: #ccc;
   border-radius: 10px;
+}
+
+.detail {
   height: 10px;
-  margin-top: 15px;
-  min-width: 100px;
   width: 50%;
-  animation: pulse 1.5s infinite ease-in-out;
 }
 
-.detail-heading{
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+.detailHeading {
   height: 30px;
-  margin-top: 15px;
   min-width: 200px;
-  animation: pulse 1.5s infinite ease-in-out;
 }
 
-.imageCircle{
+.imageCircle {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  background: #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 @keyframes pulse {
   0% {
     background-color: #ccc;

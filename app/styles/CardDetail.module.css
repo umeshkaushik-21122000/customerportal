@@ -1,47 +1,21 @@
-.photo-grid {
+.photoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 60px; 
 }
 
-.object-cover{
+.objectCover {
   object-fit: cover;
 }
-
 
 .container {
   padding: 20px;
 }
 
-.customer-details{
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 20px;
-}
-.full-circle{
-  border-radius: 50%;
-  border: 3px solid black;
-}
-
-.customer-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.customer-title,
-.customer-address {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 5px;
-}
-
-
-
-.photo-card {
+.photoCard {
   background: #fff;
-  max-height: 150px ;
-  max-width: 150px ;
+  max-height: 150px;
+  max-width: 150px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;

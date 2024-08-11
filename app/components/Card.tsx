@@ -1,18 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/Card.module.css';
+import { CardProps } from '../Interfaces/types';
 
-const Card = ({ user, onClick, isSelected, id }:any) => {
+const Card = ({ user, onClick, isSelected, id }: CardProps) => {
     const fullName = `${user.name.title} ${user.name.first} ${user.name.last}`;
     const address = `${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state}, ${user.location.country}, ${user.location.postcode}`;
 
     return (
-        <div 
-            id={id} 
-            onClick={onClick} 
+        <div
+            id={id}
+            onClick={onClick}
             className={isSelected ? styles.cardSelected : styles.card}
         >
-                        <div className={styles.details}>
+            <div className={styles.details}>
                 <h3 className={styles.h3}>{fullName}</h3>
                 <p>Email: {user.email}</p>
                 <p>Phone: {user.phone}</p>

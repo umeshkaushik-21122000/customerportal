@@ -1,18 +1,20 @@
 'use client';
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { User,UsersResponse } from '../Interfaces/types';
 
-const fetchUsers = async () => {
+
+const fetchUsers = async (): Promise<UsersResponse>  => {
   const response = await fetch('https://randomuser.me/api/?results=10');
   const data = await response.json();
   return data;
 };
 
-export const useUsers = (setSelectedUser: any) => {
-  const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const firstCall=useRef(false);
-
+export const useUsers = (setSelectedUser: (user: User) => void) => {
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<Error | null>(null);
+  const firstCall = useRef<boolean>(false);
+  
   const loadMoreUsers = useCallback(async () => {
     if (loading) return;
     setLoading(true);
@@ -22,14 +24,14 @@ export const useUsers = (setSelectedUser: any) => {
 
       if (!firstCall.current) {
         firstCall.current=true;
-           setSelectedUser(data[0]);
+              setSelectedUser(data[0]);
       }
-      setUsers((prev: any) => [...prev, ...data]);
+        setUsers((prev: any) => [...prev, ...data]);
 
     } catch (err: any) {
       setError(err);
     } finally {
-           setLoading(false);
+         setLoading(false);
     }
   }, [loading, users]);
 
@@ -40,12 +42,11 @@ export const useUsers = (setSelectedUser: any) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("hi");
            loadMoreUsers();
         }
       },
       {
-        root: document.getElementById('#anchor-parent'),
+        root: document.getElementById('anchor-parent'),
         rootMargin: '20px',
         threshold: 1.0
       }

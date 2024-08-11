@@ -1,36 +1,47 @@
+.container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
 
-.customer-detail{
+.customerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.customerName, 
+.customerEmail, 
+.customerPhone, 
+.customerAddress {
   background: #ccc;
   height: 25px;
   border-radius: 4px;
-  margin-top: 15px;
-  margin-bottom: 15px;
   animation: pulse 1.5s infinite ease-in-out;
 }
-.customer-name,.customer-phone{
 
-    
- 
-    min-width: 200px;
-    width: 50%;
-  }
-  .customer-email{
+.customerName, 
+.customerPhone {
+  min-width: 200px;
+  width: 50%;
+}
 
-    min-width: 400px;
-    width: 50%;
+.customerEmail {
+  min-width: 400px;
+  width: 50%;
+}
 
-  }
+.customerAddress {
+  min-width: 600px;
+  width: 100%;
+}
 
-  .customer-address{
+.customerImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #ccc;
+}
 
-    min-width: 600px;
-    width: 100%;
-    margin-top: 15px;
-
-  }
-  .customer-image{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-  }
- 
