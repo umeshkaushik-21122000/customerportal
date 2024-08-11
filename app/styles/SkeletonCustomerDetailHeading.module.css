@@ -1,0 +1,36 @@
+
+.customer-detail{
+  background: #ccc;
+  height: 25px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.customer-name,.customer-phone{
+
+    
+ 
+    min-width: 200px;
+    width: 50%;
+  }
+  .customer-email{
+
+    min-width: 400px;
+    width: 50%;
+
+  }
+
+  .customer-address{
+
+    min-width: 600px;
+    width: 100%;
+    margin-top: 15px;
+
+  }
+  .customer-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+ 

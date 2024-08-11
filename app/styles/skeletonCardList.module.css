@@ -1,6 +1,7 @@
 .cardList{
   display: flex;
   flex-direction: column;
+  gap:20px;
 }
 .card {
   background: #fff;
@@ -8,8 +9,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  min-height: 100px;
+  padding: 10px;
+  min-height: 150px;
+  min-width: 380px;
   gap:20px;
   margin: 10px;
   animation: pulse 1.5s infinite ease-in-out;

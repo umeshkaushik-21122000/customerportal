@@ -22,45 +22,42 @@ export const useUsers = (setSelectedUser: any) => {
 
       if (!firstCall.current) {
         firstCall.current=true;
-        setSelectedUser(data[0]);
+           setSelectedUser(data[0]);
       }
       setUsers((prev: any) => [...prev, ...data]);
 
     } catch (err: any) {
       setError(err);
     } finally {
-      setLoading(false);
+           setLoading(false);
     }
   }, [loading, users]);
 
-  const observer = useRef(
-    new IntersectionObserver(
-      (entries) => {
-        const first = entries[0];
-        if (first.isIntersecting) {
-          loadMoreUsers();
+  useEffect(()=>{
+    loadMoreUsers();
+  },[]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log("hi");
+           loadMoreUsers();
         }
       },
-      { threshold: 1.0 } // Adjust as needed (1.0 means the target must be fully visible)
-    )
-  );
+      {
+        root: document.getElementById('#anchor-parent'),
+        rootMargin: '20px',
+        threshold: 1.0
+      }
+    );
 
-  const limitScrollRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const currentObserver = observer.current;
-    const currentLimitScrollRef = limitScrollRef.current;
-
-    if (currentLimitScrollRef) {
-      currentObserver.observe(currentLimitScrollRef);
-    }
+    const target = document.querySelector('#scroll-anchor');
+    if (target) observer.observe(target);
 
     return () => {
-      if (currentLimitScrollRef) {
-        currentObserver.unobserve(currentLimitScrollRef);
-      }
+      if (target) observer.unobserve(target);
     };
-  }, [limitScrollRef, loadMoreUsers]);
+  }, [loadMoreUsers]);
 
-  return { users, loading, error, limitScrollRef };
+  return { users, loading, error };
 };

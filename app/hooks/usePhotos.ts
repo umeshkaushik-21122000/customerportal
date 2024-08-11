@@ -23,7 +23,9 @@ export const usePhotos = (user:any) => {
         setError(err);
       }
       finally{
-           setLoading(false);
+            if(user){
+              setLoading(false);
+            }
       }
     };
 

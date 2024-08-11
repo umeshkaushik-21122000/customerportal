@@ -1,43 +1,36 @@
-/* Card.module.css */
+.card, .cardSelected {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10px;
+  text-align: start;
+  height: 100%;
+  margin: 10px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
 
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    padding: 20px;
-    text-align: start;
-    height: 100%;
-    margin: 10px;
-  }
-  
-  .card-selected{
-    background: #eee;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    display: flex;
-    padding: 20px;
-    text-align: start;
-    height: 100%;
-    margin: 10px;
-  }
-  .imageContainer {
-    margin-bottom: 15px;
-  }
-  
-  .image {
-    border-radius: 50%;
-    border: 2px solid black;
-  }
-  
-  .details {
-    font-size: 0.9rem;
-    color: #aaa;
-  }
-  
-  .h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: black;
-  }
-  
+.cardSelected {
+  background: #eee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.imageContainer {
+  margin-right: 15px; 
+}
+
+.image {
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #5e5e5e; 
+}
+
+.h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000;
+}
