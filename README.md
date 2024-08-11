@@ -27,5 +27,4 @@ Open your browser and go to [localhost:3000](http://localhost:3000) to view the 
 
 ## Sample Image:
 
-![index](https://github.com/umeshkaushik-21122000/customerportal
-/blob/main/public/img/sampleImage1.png)
+![index](https://github.com/umeshkaushik-21122000/customerportal/blob/main/public/img/sampleImage1.png)
